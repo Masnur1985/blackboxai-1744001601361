@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Matematika & Keuangan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-[Poppins] bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-blue-600">
+                    <i class="fas fa-calculator mr-2"></i>MatKeu
+                </h1>
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="nav-link active">Beranda</a></li>
+                    <li><a href="#simulasi" class="nav-link">Simulasi</a></li>
+                    <li><a href="#materi" class="nav-link">Materi</a></li>
+                    <li><a href="#tentang" class="nav-link">Tentang</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Home Section -->
+        <section id="home" class="section active min-h-screen flex items-center">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold text-gray-800 mb-4">Belajar Matematika & Keuangan Jadi Menyenangkan!</h2>
+                        <p class="text-lg text-gray-600 mb-8">Mari belajar mengelola uang sambil mengasah kemampuan matematika dengan cara yang seru!</p>
+                        <a href="#simulasi" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300">
+                            Mulai Belajar
+                        </a>
+                    </div>
+                    <div class="md:w-1/2 mt-8 md:mt-0">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bWF0aCxraWRzfHx8fHx8MTcwNzI5NDY5NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" 
+                             alt="Anak-anak belajar matematika" 
+                             class="rounded-lg shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simulasi Section -->
+        <section id="simulasi" class="section min-h-screen bg-white py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Simulasi Transaksi</h2>
+                <div class="max-w-md mx-auto bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <form id="transaksiForm" class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="saldoAwal">
+                                Saldo Awal (Rp)
+                            </label>
+                            <input type="number" id="saldoAwal" 
+                                   class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500"
+                                   placeholder="Masukkan saldo awalmu">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="jumlahBeli">
+                                Jumlah Pembelian (Rp)
+                            </label>
+                            <input type="number" id="jumlahBeli"
+                                   class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500"
+                                   placeholder="Masukkan jumlah yang ingin dibeli">
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+                            Simulasikan Transaksi
+                        </button>
+                    </form>
+                    <div id="hasilSimulasi" class="mt-6 p-4 rounded-lg hidden">
+                        <!-- Hasil akan ditampilkan di sini -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Materi Section -->
+        <section id="materi" class="section min-h-screen py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Materi Pembelajaran</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">
+                            <i class="fas fa-plus-minus mr-2 text-blue-600"></i>
+                            Penjumlahan dan Pengurangan
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Belajar menghitung uang masuk dan keluar dengan cara yang mudah dan menyenangkan.
+                        </p>
+                        <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8bWF0aCxlZHVjYXRpb258fHx8fHwxNzA3Mjk0Njk0&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" 
+                             alt="Ilustrasi penjumlahan dan pengurangan"
+                             class="w-full rounded-lg mb-4">
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">
+                            <i class="fas fa-percent mr-2 text-blue-600"></i>
+                            Menghitung Diskon
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Pahami cara menghitung diskon dan hemat uang saat berbelanja.
+                        </p>
+                        <img src="https://images.unsplash.com/photo-1556742393-d75f468bfcb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8c2hvcHBpbmcsZGlzY291bnR8fHx8fHwxNzA3Mjk0Njk0&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" 
+                             alt="Ilustrasi menghitung diskon"
+                             class="w-full rounded-lg mb-4">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tentang Section -->
+        <section id="tentang" class="section min-h-screen bg-white py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Tentang Aplikasi</h2>
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">
+                            <i class="fas fa-info-circle mr-2 text-blue-600"></i>
+                            Apa itu MatKeu?
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            MatKeu adalah aplikasi pembelajaran yang menggabungkan konsep matematika dengan literasi keuangan. 
+                            Dirancang khusus untuk siswa SD, aplikasi ini membantu memahami konsep matematika dasar melalui 
+                            simulasi transaksi keuangan sederhana yang relevan dengan kehidupan sehari-hari.
+                        </p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">
+                            <i class="fas fa-star mr-2 text-blue-600"></i>
+                            Keunggulan
+                        </h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Dapat digunakan tanpa koneksi internet (mode offline)</li>
+                            <li>Simulasi transaksi yang sederhana dan mudah dipahami</li>
+                            <li>Materi pembelajaran yang menyenangkan</li>
+                            <li>Tampilan yang ramah untuk anak-anak</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
